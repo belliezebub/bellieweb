@@ -1,0 +1,145 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS code to style the hero page, sticky header, and navbar */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #081b29; /* Background color */
+    font-family: Arial, sans-serif; /* Change font family if needed */
+}
+
+
+
+/*HOME*/
+.home {
+    height: 100vh; /* 100% of the viewport height */
+    background-image: url('../assets/download.jpg'); /* Replace 'download.jpg' with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    position: relative; /* Establish positioning context for absolutely positioned children */
+}
+
+/* Center content vertically and horizontally */
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+    max-width: 600px;
+}
+
+/* Make the photo oval */
+.myPhoto {
+    width: 80%; /* Adjust the width as needed */
+    max-height: 80%; /* Adjust the height as needed */
+    object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+    filter: drop-shadow(10px 7px 10px #00abf0);
+    margin-top: 20px; /* Add space between the logo and the image */
+    padding: 15px;
+    border-radius: 50%; /* Make the photo oval */
+}
+
+/* Typing animation for heading */
+.home-content h1 {
+    font-size: 40px; /* Decrease font size for better visibility */
+    font-weight: 700;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ededed;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to h1 */
+}
+
+/* Subtitle styles */
+.home-content h3 {
+    font-size: 28px; /* Decrease font size for better visibility */
+    font-weight: 700;
+    color: #78cef0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to h3 */
+}
+
+/* Paragraph styles */
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Adjust text sizes and photo dimensions for smaller screens */
+@media (max-width: 768px) {
+    /* Text sizes */
+    .home-content h1 {
+        font-size: 32px; /* Decrease font size for better visibility */
+    }
+
+    .home-content h3 {
+        font-size: 24px; /* Decrease font size for better visibility */
+    }
+
+    .home-content p {
+        font-size: 14px; /* Decrease font size for better visibility */
+    }
+
+    /* Photo dimensions */
+    .myPhoto {
+        width: 60%; /* Adjust the width as needed */
+        max-height: 60%; /* Adjust the height as needed */
+        margin-top: 10px; /* Adjust margin top as needed */
+    }
+}
+
+/* Adjust text sizes and photo dimensions for even smaller screens */
+@media (max-width: 480px) {
+    /* Text sizes */
+    .home-content h1 {
+        font-size: 24px; /* Decrease font size for better visibility */
+    }
+
+    .home-content h3 {
+        font-size: 20px; /* Decrease font size for better visibility */
+    }
+
+    .home-content p {
+        font-size: 12px; /* Decrease font size for better visibility */
+    }
+
+    /* Photo dimensions */
+    .myPhoto {
+        width: 50%; /* Adjust the width as needed */
+        max-height: 50%; /* Adjust the height as needed */
+        margin-top: 5px; /* Adjust margin top as needed */
+    }
+}
+
+
+ 
+

@@ -1,0 +1,40 @@
+/*Contact*/
+.contact {
+    height: 25vh;
+    background: linear-gradient(to right, #04090f, #005f85, #bdbdbd); /* Darker shades of the original colors */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.contact-content a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-content a img {
+    max-width: 30%; /* Limit the width of the image to 30% */
+    max-height: 30vh; /* Limit the height of the image to 30% of the viewport height */
+    border-radius: 50%; /* Make the image round */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for smooth effect */
+}
+
+.contact-content a:hover img {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Add glow effect on hover */
+}
+
+.contact-content a span {
+    margin-top: 5px;
+    font-size: 14px;
+}

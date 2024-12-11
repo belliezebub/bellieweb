@@ -1,0 +1,74 @@
+/* Projects */
+#projects {
+    width: 100%;
+    min-height: 100vh; /* Ensure section height is at least viewport height */
+    background-image: url('../assets/project-bg.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+#projects h1 {
+    font-size: 42px;
+    margin-top: 0;
+    color: white;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.projects-content > div {
+    width: calc(33.33% - 20px);
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency here */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align:center;
+}
+
+.projects-content > div h2 {
+    margin-top: 0;
+    /* Apply gradient background */
+    background: linear-gradient(135deg, #a0a0a0, #0055ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Add black stroke */
+    text-shadow: 2px 2px 2px black;
+}
+
+.projects-content > div ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects-content > div ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .projects-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .projects-content > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #projects h1 {
+        font-size: 32px; /* Decrease font size for smaller screens */
+    }
+
+    .projects-content > div h2 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+}

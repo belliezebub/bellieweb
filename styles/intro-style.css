@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #ededed;
+    text-decoration: none;
+    cursor: default;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #7d2ae8;
+}
+
+.navigation a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    margin-left: 35px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.myPhoto {
+    display: none;
+}
+
+.navigation a:hover {
+    color: #00abf0;
+}
+
+.home {
+    height: 100vh;
+    background: url('../assets/home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 2%; /* Added 2% padding on each side */
+}
+
+.home-content {
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #ededed;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: transparent;
+    }
+}
+
+.home-content h3,
+.home-content p,
+.home-content .btn-group {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.home-content h3.show,
+.home-content p.show,
+.home-content .btn-group.show {
+    opacity: 1;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-group {
+    display: flex;
+    width: 155px;
+    height: 50px;
+    background: transparent;
+}
+
+.btn-group a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-group a:hover {
+    color: #00abf0;
+}
+
+.btn-group a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-group a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .5;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        margin: 0; /* Removed margin for body */
+    }
+    .header{
+        align-items: center;
+    }
+    .home {
+        padding: 0 2%; /* Added 2% padding on each side */
+        width: 100%; /* Made home width 100% */
+        align-items: center; /* Centered the content vertically */
+        background-color: #081b29;
+    }
+
+    .home-content {
+        max-width: 600px;
+        opacity: 0;
+        animation: fadeIn 1s ease 1s forwards;
+        margin: 0 2%; /* Added 2% margin on each side */
+    }
+
+    .myPhoto {
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        border-radius: 50%; /* Round the corners */
+        width: 150px; /* Adjust the width of the image */
+        height: 150px; /* Adjust the height of the image */
+        object-fit: cover; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add space between the logo and the image */
+        padding: 15px;
+    }
+
+    .home-content h1 {
+        font-size: 30px; /* Decrease the font size */
+        margin-top: 0; /* Remove margin top */
+    }
+.home-content h3 {
+        font-size: 20px; /* Decrease the font size */
+        margin-top: 2px; /* Remove margin top */
+    }
+    .home-content p {
+        font-size: 14px; /* Decrease the font size */
+        margin: 10px 0 20px; /* Adjust the margin */
+    }
+}
